@@ -8,10 +8,19 @@
         <servlet-name>ServletDemo</servlet-name>
         <servlet-class>cn.muzi.ServletDemo</servlet-class>
     </servlet>
-
     <servlet-mapping>
         <servlet-name>ServletDemo</servlet-name>
         <url-pattern>/servletdemo</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>HttpServlet</servlet-name>
+        <servlet-class>cn.muzi.HttpServletDemo</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HttpServlet</servlet-name>
+        <url-pattern>/httpservlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
