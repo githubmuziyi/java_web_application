@@ -17,6 +17,18 @@
         <servlet-name>HttpServlet</servlet-name>
         <servlet-class>cn.muzi.HttpServletDemo</servlet-class>
         <load-on-startup>1</load-on-startup>
+        <init-param>
+            <param-name>name</param-name>
+            <param-value>muzi</param-value>
+        </init-param>
+        <init-param>
+            <param-name>age</param-name>
+            <param-value>23</param-value>
+        </init-param>
+        <init-param>
+            <param-name>school</param-name>
+            <param-value>nanchang</param-value>
+        </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>HttpServlet</servlet-name>
