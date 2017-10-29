@@ -4,6 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
+    <context-param>
+        <param-name>context_name</param-name>
+        <param-value>context_name_value</param-value>
+    </context-param>
+
     <servlet>
         <servlet-name>ServletDemo</servlet-name>
         <servlet-class>cn.muzi.ServletDemo</servlet-class>
@@ -33,6 +38,15 @@
     <servlet-mapping>
         <servlet-name>HttpServlet</servlet-name>
         <url-pattern>/httpservlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>servletContext</servlet-name>
+        <servlet-class>cn.muzi.ServletContextDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>servletContext</servlet-name>
+        <url-pattern>/servletcontext</url-pattern>
     </servlet-mapping>
 
 </web-app>
