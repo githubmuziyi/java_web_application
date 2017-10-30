@@ -48,5 +48,14 @@
         <servlet-name>servletContext</servlet-name>
         <url-pattern>/servletcontext</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>ResponseServlet</servlet-name>
+        <servlet-class>cn.muzi.ResponseDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ResponseServlet</servlet-name>
+        <url-pattern>/responseservlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>
