@@ -12,5 +12,8 @@
   </head>
   <body>
   <h1>Hello World!</h1>
+  <%
+    String message = (String) application.getAttribute("message");
+  %>
   </body>
 </html>
