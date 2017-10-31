@@ -86,9 +86,17 @@ public class ResponseDemo extends HttpServlet{
         //String day = new Random().nextInt() + "";
         //resp.getOutputStream().write(day.getBytes());
         //方式2
-        String message = "<meta http-equiv='refresh' content='3;url=/module1/servletdemo'> 登入成功";
+        /*String message = "<meta http-equiv='refresh' content='3;url=/module1/servletdemo'> 登入成功";
         this.getServletContext().setAttribute("message", message);
-        this.getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);
+        this.getServletContext().getRequestDispatcher("/index.jsp").forward(req, resp);*/
+        /**
+         * 请求重定向
+         */
+        //方式1
+        resp.setStatus(302);
+        resp.setHeader("location", "/module1/servletdemo");
+        //方式2
+        resp.sendRedirect("/module1/servletdemo");
     }
 
     private void drawRandomNum(Graphics2D graphics) {
