@@ -98,6 +98,35 @@ public class RequestDemo extends HttpServlet{
         while ((len = inputStream.read(buffer)) > 0) {
             System.out.println(new String(buffer, 0, len));
         }
-
+        /**
+         * 获取请求参数中文数据
+         */
+        req.setCharacterEncoding("UTF-8"); //只对post请求有效
+        System.out.println(req.getParameter("name"));
+        //get请求
+        String str_name = new String(req.getParameter("name").getBytes("iso8859-1"), "UTF-8");
+        System.out.println(str_name);
+        /**
+         * 请求转发，把request域对象把数据带给转发资源
+         */
+        //设置request域数据
+        req.setAttribute("data", "muzi");
+        //转发 forward时，会清空response中的数据
+        req.getRequestDispatcher("/module1/servletdemo").forward(req, resp);
+        //return; //习惯良好  转发后记得加上return
+        /**
+         * 包含 (可以包含一些公共的页面，例如页有页脚)
+         */
+        req.getRequestDispatcher("/head.jsp").include(req, resp);
+        resp.getWriter().write("muzi");
+        req.getRequestDispatcher("/foot.jsp").include(req, resp);
+        /**
+         * 防盗链
+         */
+        String  referer = req.getHeader("referer");
+        if (referer == null || referer.startsWith("http://muzi.habo")) {
+            resp.sendRedirect("/module1/servletdemo");
+            return;
+        }
     }
 }
