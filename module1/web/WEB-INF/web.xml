@@ -66,5 +66,14 @@
         <servlet-name>RequestServlet</servlet-name>
         <url-pattern>/requestservlet</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CookieDemo</servlet-name>
+        <servlet-class>cn.muzi.CookieDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CookieDemo</servlet-name>
+        <url-pattern>/cookieservlet</url-pattern>
+    </servlet-mapping>
 
 </web-app>
