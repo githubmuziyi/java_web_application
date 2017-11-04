@@ -68,12 +68,21 @@
     </servlet-mapping>
     
     <servlet>
-        <servlet-name>CookieDemo</servlet-name>
+        <servlet-name>CookieServlet</servlet-name>
         <servlet-class>cn.muzi.CookieDemo</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CookieDemo</servlet-name>
+        <servlet-name>CookieServlet</servlet-name>
         <url-pattern>/cookieservlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SessionServlet</servlet-name>
+        <servlet-class>cn.muzi.SessionDemo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SessionServlet</servlet-name>
+        <url-pattern>/sessionservlet</url-pattern>
     </servlet-mapping>
 
 </web-app>
