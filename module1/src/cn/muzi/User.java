@@ -8,6 +8,9 @@ public class User {
     private String name;
     private int age;
 
+    public User() {
+    }
+
     public String getName() {
         return name;
     }

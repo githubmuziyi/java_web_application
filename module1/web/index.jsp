@@ -12,8 +12,19 @@
   </head>
   <body>
   <h1>Hello World!</h1>
-  <%
-    String message = (String) application.getAttribute("message");
+
+  <!--jsp声明-->
+  <%!
+    String name = "muzi";  //声明字符串变量
+    int add(int x, int y) { //声明函数
+      return x + y;
+    }
   %>
+
+  <!--jsp表达式-->
+  你好，<%=name %>
+  <br>
+  x + y = <%=add(5, 6) %>
+
   </body>
-</html>
+<%--</html>--%>

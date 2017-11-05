@@ -7,6 +7,10 @@ import java.io.PrintWriter;
 
 /**
  * Created by muzi on 2017/11/4.
+ * 应用:
+ *  1.使用session完成用户登录
+ *  2.利用session防止表单重复提交（生成表单唯一号存储在session中）
+ *  3.利用session实现一次性验证码的校验
  */
 public class SessionDemo extends HttpServlet {
 
